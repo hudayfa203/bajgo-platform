@@ -442,7 +442,7 @@ class VerificationScreen extends ConsumerWidget {
                         height: 96,
                         width: 96,
                         decoration: BoxDecoration(
-                          color: colour.withOpacity(0.14),
+                          color: colour.withAlpha(36),
                           shape: BoxShape.circle,
                         ),
                         child: Icon(icon, size: 40, color: colour),

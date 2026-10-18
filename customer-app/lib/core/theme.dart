@@ -112,16 +112,6 @@ class BgTheme {
         centerTitle: false,
         titleTextStyle: text.titleLarge,
       ),
-      cardTheme: CardTheme(
-        color: scheme.surface,
-        surfaceTintColor: Colors.transparent,
-        elevation: 0,
-        margin: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(BgSpace.rCard),
-          side: BorderSide(color: border),
-        ),
-      ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: scheme.surface,

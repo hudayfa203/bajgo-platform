@@ -143,14 +143,6 @@ ThemeData buildDriverTheme() {
       titleTextStyle: BgType.h2,
       iconTheme: IconThemeData(color: BgColors.dBlue),
     ),
-    cardTheme: CardTheme(
-      color: BgColors.dSurface,
-      elevation: 0,
-      margin: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(BgRadius.card),
-      ),
-    ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: BgColors.dSurface,
@@ -199,14 +191,6 @@ ThemeData buildDriverTheme() {
       dragHandleColor: BgColors.dSurface2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(BgRadius.sheet)),
-      ),
-    ),
-    dialogTheme: DialogTheme(
-      backgroundColor: BgColors.dSurface,
-      titleTextStyle: BgType.h3,
-      contentTextStyle: BgType.bodyText,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(BgRadius.card),
       ),
     ),
     switchTheme: SwitchThemeData(
@@ -261,14 +245,6 @@ ThemeData buildDriverTheme() {
       iconColor: BgColors.dBlue,
       textColor: BgColors.dText,
       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-    ),
-    tabBarTheme: const TabBarTheme(
-      labelColor: BgColors.night,
-      unselectedLabelColor: BgColors.dText2,
-      labelStyle: BgType.label,
-      unselectedLabelStyle: BgType.label,
-      indicatorSize: TabBarIndicatorSize.tab,
-      dividerColor: Colors.transparent,
     ),
   );
 }

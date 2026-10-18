@@ -17,9 +17,6 @@ on:
         required: false
         default: ''
 
-env:
-  FLUTTER_VERSION: '3.24.5'
-
 jobs:
   build:
     name: ${{ matrix.app }} APK
@@ -43,14 +40,18 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      # Current stable: the plugin versions resolved by pub expect a recent
+      # Flutter and a recent Android Gradle Plugin.
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: stable
           cache: true
 
       - name: Flutter version
-        run: flutter --version
+        run: |
+          flutter --version 2>&1 | tee "$RUNNER_TEMP/version.log"
+          head -1 "$RUNNER_TEMP/version.log" |
+            while IFS= read -r line; do echo "::notice title=toolchain::${line}"; done
 
       - name: Pub get
         working-directory: ${{ matrix.dir }}

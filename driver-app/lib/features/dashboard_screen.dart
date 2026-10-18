@@ -379,7 +379,7 @@ class _OfferOverlayState extends ConsumerState<OfferOverlay> {
     final isDelivery = o.service == ServiceType.delivery;
 
     return Container(
-      color: BgColors.night.withOpacity(0.92),
+      color: BgColors.night.withAlpha(235),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),

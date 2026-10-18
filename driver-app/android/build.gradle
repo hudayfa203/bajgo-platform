@@ -13,6 +13,20 @@ subprojects {
     project.evaluationDependsOn(":app")
 }
 
+// Some plugin modules no longer declare compileSdk or ndkVersion themselves and
+// expect the host app's values. `plugins.withId` runs as the Android plugin is
+// applied, i.e. before AGP reads the DSL, so the values are in place in time.
+subprojects {
+    plugins.withId("com.android.library") {
+        project.extensions.configure("android") { ext ->
+            ext.compileSdk = 35
+            if (ext.namespace == null) {
+                ext.namespace = project.group.toString()
+            }
+        }
+    }
+}
+
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }

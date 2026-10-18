@@ -201,7 +201,9 @@ class _BookingScaffold extends ConsumerWidget {
     final l = AppLocalizations.of(context);
     final t = Theme.of(context);
     final quote = draft.quote;
-    final centre = draft.pickup?.location ?? ref.watch(locationProvider);
+    final pickupPlace = draft.pickup;
+    final LatLng centre =
+        pickupPlace == null ? ref.watch(locationProvider) : pickupPlace.location;
 
     return Scaffold(
       appBar: AppBar(title: Text(title)),

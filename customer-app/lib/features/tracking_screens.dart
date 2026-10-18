@@ -372,7 +372,7 @@ class _SearchingPulseState extends State<_SearchingPulse> with SingleTickerProvi
                 height: 40 + 50 * v,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: BgColors.saffron.withOpacity((1 - v) * 0.45),
+                  color: BgColors.saffron.withAlpha((((1 - v) * 0.45) * 255).round()),
                 ),
               ),
               Container(

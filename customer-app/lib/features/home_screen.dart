@@ -366,7 +366,7 @@ class _ServiceCard extends StatelessWidget {
                       fontFamily: BgTheme.body,
                       fontSize: 12,
                       height: 1.35,
-                      color: foreground.withOpacity(0.85))),
+                      color: foreground.withAlpha(217))),
             ],
           ),
         ),
