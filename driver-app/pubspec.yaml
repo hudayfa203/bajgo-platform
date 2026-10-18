@@ -37,7 +37,8 @@ dependencies:
   image_picker: ^1.1.2
   cached_network_image: ^3.3.1
   url_launcher: ^6.3.0
-  intl: ^0.19.0
+  # intl is pinned by flutter_localizations for the SDK in use.
+  intl: any
 
 dev_dependencies:
   flutter_test:

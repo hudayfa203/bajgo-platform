@@ -55,7 +55,9 @@ jobs:
 
       - name: Pub get
         working-directory: ${{ matrix.dir }}
-        run: flutter pub get
+        run: |
+          set -o pipefail
+          flutter pub get 2>&1 | tee "$RUNNER_TEMP/pubget.log"
 
       # gen_l10n writes lib/l10n/generated/app_localizations.dart (l10n.yaml).
       # Running it explicitly means `flutter analyze` and `flutter test` see it
@@ -128,6 +130,7 @@ jobs:
             done
           fi
           emit l10n "$RUNNER_TEMP/l10n.log" '(Error|error)' 5
+          emit "pub get" "$RUNNER_TEMP/pubget.log" '(^Because|incompatible|version solving failed|depends on|requires)' 15
           if [ -f "$RUNNER_TEMP/test.log" ]; then
             grep -aE "tests passed|tests? failed" "$RUNNER_TEMP/test.log" | tail -2 |
               while IFS= read -r line; do
