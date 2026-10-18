@@ -12,8 +12,46 @@ import 'data/demo_api.dart';
 import 'data/providers.dart';
 import 'l10n/generated/app_localizations.dart';
 
+const bool _demoDiagnostics = Env.demo;
+
+/// In a release build Flutter paints a plain grey box wherever a widget throws,
+/// which tells a tester nothing. In demo builds show the actual error instead.
+void _installDemoErrorWidget() {
+  if (!_demoDiagnostics) return;
+  ErrorWidget.builder = (FlutterErrorDetails details) => Material(
+        color: const Color(0xFFD93A3F),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'Demo build — widget error',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    details.exceptionAsString(),
+                    style: const TextStyle(color: Colors.white, fontSize: 11, height: 1.35),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+}
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  _installDemoErrorWidget();
 
   final prefs = await SharedPreferences.getInstance();
 

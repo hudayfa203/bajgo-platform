@@ -383,6 +383,10 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                       autofocus: true,
                       keyboardType: TextInputType.number,
                       maxLength: _length,
+                      decoration: const InputDecoration(
+                        counterText: '',
+                        border: InputBorder.none,
+                      ),
                       autofillHints: const [AutofillHints.oneTimeCode],
                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                       onChanged: (v) {
@@ -393,25 +397,32 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                   ),
                   GestureDetector(
                     onTap: () => _focus.requestFocus(),
+                    // Flexible boxes: six fixed 48 px boxes plus padding do not
+                    // fit on a 360 dp screen, which overflowed the row.
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: List.generate(_length, (i) {
                         final filled = i < _controller.text.length;
-                        return Container(
-                          width: 48,
-                          height: 60,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: t.colorScheme.surface,
-                            borderRadius: BorderRadius.circular(BgSpace.rInput),
-                            border: Border.all(
-                              color: filled ? BgColors.blue : t.dividerColor,
-                              width: filled ? 2 : 1,
+                        return Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              right: i == _length - 1 ? 0 : BgSpace.sm,
                             ),
-                          ),
-                          child: Text(
-                            filled ? _controller.text[i] : '',
-                            style: t.textTheme.headlineMedium,
+                            child: Container(
+                              height: 60,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: t.colorScheme.surface,
+                                borderRadius: BorderRadius.circular(BgSpace.rInput),
+                                border: Border.all(
+                                  color: filled ? BgColors.blue : t.dividerColor,
+                                  width: filled ? 2 : 1,
+                                ),
+                              ),
+                              child: Text(
+                                filled ? _controller.text[i] : '',
+                                style: t.textTheme.headlineMedium,
+                              ),
+                            ),
                           ),
                         );
                       }),
