@@ -67,11 +67,13 @@ jobs:
       - name: Analyze
         working-directory: ${{ matrix.dir }}
         # Informational: style lints must not block a demo build.
-        run: flutter analyze --no-fatal-infos --no-fatal-warnings || true
+        run: |
+          flutter analyze --no-fatal-infos --no-fatal-warnings \
+            2>&1 | tee "$RUNNER_TEMP/analyze.log" || true
 
       - name: Unit tests
         working-directory: ${{ matrix.dir }}
-        run: flutter test || true
+        run: flutter test 2>&1 | tee "$RUNNER_TEMP/test.log" || true
 
       # ---------------------------------------------------------------- demo APK
       # DEMO=true makes the app run against its on-device simulated backend:
@@ -79,12 +81,37 @@ jobs:
       - name: Build demo APK
         working-directory: ${{ matrix.dir }}
         run: |
+          set -o pipefail
           flutter build apk --release \
             --dart-define=DEMO=true \
             --dart-define=APP_ENV=demo \
-            --dart-define=APP_VERSION=${{ github.run_number }}
+            --dart-define=APP_VERSION=${{ github.run_number }} \
+            2>&1 | tee "$RUNNER_TEMP/build.log"
           mkdir -p ../out
           cp build/app/outputs/flutter-apk/app-release.apk "../out/${{ matrix.artifact }}.apk"
+
+      # Raw job logs are not reachable from every environment, so the
+      # interesting lines are re-emitted as annotations (readable over the API).
+      - name: Diagnostics
+        if: always()
+        run: |
+          emit() {
+            local title="$1" file="$2"
+            [ -f "$file" ] || return 0
+            grep -nE "error|Error:|\.dart:[0-9]+:[0-9]+|FAILURE|What went wrong|Failed to|Exception" \
+              "$file" | head -30 | while IFS= read -r line; do
+                clean=$(printf '%s' "$line" | tr -d '\r' | cut -c1-400)
+                echo "::error title=${{ matrix.app }} ${title}::${clean}"
+              done
+          }
+          emit analyze "$RUNNER_TEMP/analyze.log"
+          emit tests "$RUNNER_TEMP/test.log"
+          emit build "$RUNNER_TEMP/build.log"
+          if [ -f "$RUNNER_TEMP/test.log" ]; then
+            tail -3 "$RUNNER_TEMP/test.log" | while IFS= read -r line; do
+              echo "::warning title=${{ matrix.app }} test summary::$(printf '%s' "$line" | tr -d '\r')"
+            done
+          fi
 
       # ---------------------------------------------------------------- live APK (optional)
       - name: Build live APK
@@ -101,8 +128,14 @@ jobs:
 
       - name: Checksums
         run: |
-          cd out && sha256sum *.apk | tee SHA256SUMS.txt
+          cd out
+          sha256sum *.apk | tee SHA256SUMS.txt
           ls -lh *.apk
+          for f in *.apk; do
+            size=$(du -h "$f" | cut -f1)
+            sum=$(sha256sum "$f" | cut -d' ' -f1)
+            echo "::notice title=APK built::${f} · ${size} · sha256 ${sum}"
+          done
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
