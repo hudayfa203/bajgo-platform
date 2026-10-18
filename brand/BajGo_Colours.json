@@ -1,0 +1,406 @@
+{
+ "palette": [
+  {
+   "name": "BajGo Blue",
+   "key": "blue",
+   "role": "Primary",
+   "use": "Logo symbol, primary buttons, links, customer app",
+   "hex": "#1E4AD6",
+   "rgb": [
+    30,
+    74,
+    214
+   ],
+   "cmyk": [
+    86,
+    65,
+    0,
+    16
+   ]
+  },
+  {
+   "name": "Garowe Night",
+   "key": "night",
+   "role": "Secondary",
+   "use": "Wordmark, headlines, dark surfaces, text",
+   "hex": "#0A1230",
+   "rgb": [
+    10,
+    18,
+    48
+   ],
+   "cmyk": [
+    79,
+    63,
+    0,
+    81
+   ]
+  },
+  {
+   "name": "Bajaaj Saffron",
+   "key": "saffron",
+   "role": "Accent",
+   "use": "Headlamp, highlights, driver app, Delivery",
+   "hex": "#FFC21A",
+   "rgb": [
+    255,
+    194,
+    26
+   ],
+   "cmyk": [
+    0,
+    24,
+    90,
+    0
+   ]
+  },
+  {
+   "name": "Sky",
+   "key": "sky",
+   "role": "Support",
+   "use": "Tints, illustrations, map routes on dark",
+   "hex": "#9DB8FF",
+   "rgb": [
+    157,
+    184,
+    255
+   ],
+   "cmyk": [
+    38,
+    28,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Deep Blue",
+   "key": "blue_dark",
+   "role": "Support",
+   "use": "Pressed states, gradients-free depth",
+   "hex": "#1638A8",
+   "rgb": [
+    22,
+    56,
+    168
+   ],
+   "cmyk": [
+    87,
+    67,
+    0,
+    34
+   ]
+  },
+  {
+   "name": "Cloud",
+   "key": "cloud",
+   "role": "Background",
+   "use": "Customer app & web light background",
+   "hex": "#F3F6FC",
+   "rgb": [
+    243,
+    246,
+    252
+   ],
+   "cmyk": [
+    4,
+    2,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "Sand",
+   "key": "sand",
+   "role": "Background",
+   "use": "Warm print background, stationery",
+   "hex": "#FBF6EA",
+   "rgb": [
+    251,
+    246,
+    234
+   ],
+   "cmyk": [
+    0,
+    2,
+    7,
+    2
+   ]
+  },
+  {
+   "name": "Slate",
+   "key": "slate",
+   "role": "Neutral",
+   "use": "Secondary text on light backgrounds",
+   "hex": "#4B556E",
+   "rgb": [
+    75,
+    85,
+    110
+   ],
+   "cmyk": [
+    32,
+    23,
+    0,
+    57
+   ]
+  },
+  {
+   "name": "Mist",
+   "key": "mist",
+   "role": "Neutral",
+   "use": "Borders, dividers, inactive states",
+   "hex": "#D9DFEC",
+   "rgb": [
+    217,
+    223,
+    236
+   ],
+   "cmyk": [
+    8,
+    6,
+    0,
+    7
+   ]
+  },
+  {
+   "name": "Success",
+   "key": "success",
+   "role": "Status",
+   "use": "Trip completed, payment received",
+   "hex": "#13A35A",
+   "rgb": [
+    19,
+    163,
+    90
+   ],
+   "cmyk": [
+    88,
+    0,
+    45,
+    36
+   ]
+  },
+  {
+   "name": "Danger",
+   "key": "danger",
+   "role": "Status",
+   "use": "Errors, cancellations, SOS",
+   "hex": "#D93A3F",
+   "rgb": [
+    217,
+    58,
+    63
+   ],
+   "cmyk": [
+    0,
+    73,
+    71,
+    15
+   ]
+  }
+ ],
+ "dark": [
+  {
+   "name": "Dark background",
+   "key": "d_bg",
+   "hex": "#060B1C",
+   "rgb": [
+    6,
+    11,
+    28
+   ],
+   "cmyk": [
+    79,
+    61,
+    0,
+    89
+   ]
+  },
+  {
+   "name": "Dark surface",
+   "key": "d_surface",
+   "hex": "#0F1833",
+   "rgb": [
+    15,
+    24,
+    51
+   ],
+   "cmyk": [
+    71,
+    53,
+    0,
+    80
+   ]
+  },
+  {
+   "name": "Dark surface 2",
+   "key": "d_surface2",
+   "hex": "#17224A",
+   "rgb": [
+    23,
+    34,
+    74
+   ],
+   "cmyk": [
+    69,
+    54,
+    0,
+    71
+   ]
+  },
+  {
+   "name": "Blue (dark mode)",
+   "key": "d_blue",
+   "hex": "#5C80FF",
+   "rgb": [
+    92,
+    128,
+    255
+   ],
+   "cmyk": [
+    64,
+    50,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Text (dark)",
+   "key": "d_text",
+   "hex": "#F3F6FC",
+   "rgb": [
+    243,
+    246,
+    252
+   ],
+   "cmyk": [
+    4,
+    2,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "Text 2 (dark)",
+   "key": "d_text2",
+   "hex": "#A9B4CF",
+   "rgb": [
+    169,
+    180,
+    207
+   ],
+   "cmyk": [
+    18,
+    13,
+    0,
+    19
+   ]
+  }
+ ],
+ "contrast": [
+  {
+   "fg": "white",
+   "bg": "blue",
+   "ratio": 6.99,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": false
+  },
+  {
+   "fg": "night",
+   "bg": "saffron",
+   "ratio": 11.37,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": true
+  },
+  {
+   "fg": "saffron",
+   "bg": "night",
+   "ratio": 11.37,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": true
+  },
+  {
+   "fg": "blue",
+   "bg": "cloud",
+   "ratio": 6.45,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": false
+  },
+  {
+   "fg": "night",
+   "bg": "cloud",
+   "ratio": 16.99,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": true
+  },
+  {
+   "fg": "slate",
+   "bg": "white",
+   "ratio": 7.44,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": true
+  },
+  {
+   "fg": "white",
+   "bg": "night",
+   "ratio": 18.39,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": true
+  },
+  {
+   "fg": "d_text",
+   "bg": "d_bg",
+   "ratio": 18.09,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": true
+  },
+  {
+   "fg": "d_blue",
+   "bg": "d_bg",
+   "ratio": 5.58,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": false
+  },
+  {
+   "fg": "saffron",
+   "bg": "blue",
+   "ratio": 4.32,
+   "aa_text": false,
+   "aa_large": true,
+   "aaa": false
+  },
+  {
+   "fg": "white",
+   "bg": "saffron",
+   "ratio": 1.62,
+   "aa_text": false,
+   "aa_large": false,
+   "aaa": false
+  },
+  {
+   "fg": "blue",
+   "bg": "saffron",
+   "ratio": 4.32,
+   "aa_text": false,
+   "aa_large": true,
+   "aaa": false
+  },
+  {
+   "fg": "sky",
+   "bg": "night",
+   "ratio": 9.4,
+   "aa_text": true,
+   "aa_large": true,
+   "aaa": true
+  }
+ ]
+}

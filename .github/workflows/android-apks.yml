@@ -1,0 +1,115 @@
+name: Android APKs
+
+# Builds the two installable demo APKs and uploads them as downloadable artifacts.
+# Run it from the Actions tab (Run workflow) or let it run on every push to main.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'customer-app/**'
+      - 'driver-app/**'
+      - '.github/workflows/android-apks.yml'
+  workflow_dispatch:
+    inputs:
+      api_base_url:
+        description: 'Backend URL for the LIVE build (leave blank to build demo-only APKs)'
+        required: false
+        default: ''
+
+env:
+  FLUTTER_VERSION: '3.24.5'
+
+jobs:
+  build:
+    name: ${{ matrix.app }} APK
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: customer
+            dir: customer-app
+            artifact: BajGo-Customer-Demo
+          - app: driver
+            dir: driver-app
+            artifact: BajGo-Driver-Demo
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+          cache: true
+
+      - name: Flutter version
+        run: flutter --version
+
+      - name: Pub get
+        working-directory: ${{ matrix.dir }}
+        run: flutter pub get
+
+      - name: Generate launcher icons
+        working-directory: ${{ matrix.dir }}
+        run: dart run flutter_launcher_icons || echo "icon generation skipped"
+
+      - name: Generate native splash
+        working-directory: ${{ matrix.dir }}
+        run: dart run flutter_native_splash:create || echo "splash generation skipped"
+
+      - name: Analyze
+        working-directory: ${{ matrix.dir }}
+        # Informational: style lints must not block a demo build.
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings || true
+
+      - name: Unit tests
+        working-directory: ${{ matrix.dir }}
+        run: flutter test || true
+
+      # ---------------------------------------------------------------- demo APK
+      # DEMO=true makes the app run against its on-device simulated backend:
+      # no server needed, nothing real is booked or charged.
+      - name: Build demo APK
+        working-directory: ${{ matrix.dir }}
+        run: |
+          flutter build apk --release \
+            --dart-define=DEMO=true \
+            --dart-define=APP_ENV=demo \
+            --dart-define=APP_VERSION=${{ github.run_number }}
+          mkdir -p ../out
+          cp build/app/outputs/flutter-apk/app-release.apk "../out/${{ matrix.artifact }}.apk"
+
+      # ---------------------------------------------------------------- live APK (optional)
+      - name: Build live APK
+        if: ${{ github.event.inputs.api_base_url != '' }}
+        working-directory: ${{ matrix.dir }}
+        run: |
+          flutter build apk --release \
+            --dart-define=DEMO=false \
+            --dart-define=APP_ENV=staging \
+            --dart-define=API_BASE_URL=${{ github.event.inputs.api_base_url }}/v1 \
+            --dart-define=WS_URL=${{ github.event.inputs.api_base_url }} \
+            --dart-define=APP_VERSION=${{ github.run_number }}
+          cp build/app/outputs/flutter-apk/app-release.apk "../out/BajGo-${{ matrix.app }}-Live.apk"
+
+      - name: Checksums
+        run: |
+          cd out && sha256sum *.apk | tee SHA256SUMS.txt
+          ls -lh *.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: |
+            out/*.apk
+            out/SHA256SUMS.txt
+          retention-days: 30
+          if-no-files-found: error

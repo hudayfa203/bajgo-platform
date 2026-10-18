@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "key": "garowe",
+        "name": "Garowe",
+        "kind": "service_area",
+        "active": true,
+        "placeholder": true
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [48.455, 8.435],
+              [48.515, 8.435],
+              [48.515, 8.375],
+              [48.455, 8.375],
+              [48.455, 8.435]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

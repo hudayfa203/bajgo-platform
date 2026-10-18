@@ -1,0 +1,6 @@
+/* Somali permission strings (flag for native review) */
+"NSLocationWhenInUseUsageDescription" = "BajGo wuxuu isticmaalaa goobtaada si uu u helo meesha lagaa qaadayo iyo Bajaajta kuu dhow.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "BajGo wuxuu isticmaalaa goobtaada si uu u helo meesha lagaa qaadayo iyo Bajaajta kuu dhow.";
+"NSCameraUsageDescription" = "BajGo wuxuu isticmaalaa kamaradda si aad u sawirto xirmada aad diraysid.";
+"NSPhotoLibraryUsageDescription" = "BajGo wuxuu isticmaalaa sawirradaada si aad ugu darto sawirka xirmada aad diraysid.";
+"NSPhotoLibraryAddUsageDescription" = "BajGo wuxuu kaydiyaa rasiidhada iyo sawirrada gaarsiinta ee aad doorato.";

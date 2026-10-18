@@ -1,0 +1,4 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Flutter needs it to communicate with the running application in debug mode. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

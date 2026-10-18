@@ -1,0 +1,14 @@
+process.env.APP_ENV = process.env.APP_ENV ?? 'test';
+process.env.LOG_LEVEL = process.env.LOG_LEVEL ?? 'silent';
+process.env.LOG_PRETTY = 'false';
+process.env.DISPATCH_INLINE = 'true';
+process.env.RUN_WORKER_IN_API = 'false';
+process.env.ROUTING_PROVIDER = 'haversine';
+process.env.SMS_PROVIDER = 'console';
+process.env.PUSH_PROVIDER = 'console';
+process.env.OTP_TEST_NUMBERS = process.env.OTP_TEST_NUMBERS ?? '+252900000001,+252900000002';
+process.env.OTP_TEST_CODE = process.env.OTP_TEST_CODE ?? '123456';
+process.env.SANDBOX_MM_DELAY_MS = '50';
+process.env.DEMO_ADMIN_EMAIL = 'admin@baj-go.com';
+process.env.DEMO_ADMIN_PASSWORD = 'BajGo-admin-2026';
+process.env.UPLOAD_DIR = './uploads-test';

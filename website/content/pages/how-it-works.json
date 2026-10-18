@@ -1,0 +1,88 @@
+{
+  "slug": "how-it-works",
+  "title_so": "Sida uu u shaqeeyo",
+  "title_en": "How it works",
+  "seo": {
+    "description_so": "Sida BajGo u shaqeeyo: dooro meesha, arag qiimaha, la soco darawalkaaga. Safar iyo dirid Bajaaj ah oo Garoowe ah.",
+    "description_en": "How BajGo works: choose your places, see your fare, track your driver. Bajaaj rides and deliveries in Garowe."
+  },
+  "published": true,
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "page",
+      "primary_href": "/download",
+      "so": {
+        "eyebrow": "Sida uu u shaqeeyo",
+        "headline": "Saddex tallaabo. Hal taabasho.",
+        "sub": "BajGo waxaa loo sameeyay in qof kasta isticmaali karo: taleefan iyo lambar keliya ayaad u baahan tahay.",
+        "primary_label": "Soo deji app-ka"
+      },
+      "en": {
+        "eyebrow": "How it works",
+        "headline": "Three steps. One tap.",
+        "sub": "BajGo is built so anyone can use it: all you need is a phone and a number.",
+        "primary_label": "Get the app"
+      }
+    },
+    {
+      "type": "steps",
+      "layout": "list",
+      "icons": ["phone", "pin", "fare", "track", "cash"],
+      "so": {
+        "title": "Safar, tallaabo tallaabo",
+        "steps": [
+          { "title": "Soo deji oo gal", "body": "Soo deji app-ka, geli lambarkaaga taleefanka, oo geli koodhka fariinta ahaan laguu soo diray. Furaha sirta ah looma baahna." },
+          { "title": "Dooro meelaha", "body": "Qor meesha aad joogto iyo meesha aad u socoto. Haddii cinwaan sax ah aadan haysan, biinka ka dhig khariidadda oo qor calaamad u dhow, sida masjid ama dukaan." },
+          { "title": "Arag qiimaha oo xaqiiji", "body": "Qiimaha oo dhammaystiran ayaa lagu tusayaa ka hor intaadan xaqiijin. Wuxuu ku salaysan yahay masaafada waddada." },
+          { "title": "La soco darawalkaaga", "body": "Darawalka ugu dhow ayaa helaya codsigaaga. Waxaad arkaysaa magaciisa, koodhka gaariga (tusaale BG-0142), taarikada iyo meesha uu joogo. Isku hubi koodhka ka hor intaadan fuulin." },
+          { "title": "Bixi oo qiimee", "body": "Bixi lacag caddaan ah marka safarku dhammaado. Qiimee darawalka. Rasiidh ayaad ka helaysaa app-ka." }
+        ]
+      },
+      "en": {
+        "title": "A ride, step by step",
+        "steps": [
+          { "title": "Download and sign in", "body": "Get the app, enter your phone number, and type the code sent to you by SMS. No password needed." },
+          { "title": "Choose your places", "body": "Type where you are and where you're going. If you don't have an exact address, drop a pin on the map and add a nearby landmark, such as a mosque or shop." },
+          { "title": "See the fare and confirm", "body": "The full fare is shown before you confirm. It is based on road distance." },
+          { "title": "Track your driver", "body": "The nearest driver receives your request. You see their name, fleet code (for example BG-0142), plate and live location. Check the fleet code before you get in." },
+          { "title": "Pay and rate", "body": "Pay cash when the trip ends. Rate your driver. You get a receipt in the app." }
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "layout": "list",
+      "tone": "cloud",
+      "icons": ["parcel", "pin", "track", "check"],
+      "cta_href": "/delivery",
+      "so": {
+        "title": "Dirid, tallaabo tallaabo",
+        "steps": [
+          { "title": "Sharax xirmada", "body": "Dooro nooca (cunto, xirmo, dukumeenti, dawo, alaabta suuqa) iyo cabbirka (yar, dhexdhexaad, weyn). Qor magaca iyo lambarka qaataha." },
+          { "title": "Dooro meelaha oo xaqiiji", "body": "Meesha laga qaadayo iyo meesha la geynayo. Qiimaha ayaa lagu tusayaa ka hor." },
+          { "title": "La soco xirmada", "body": "Darawalku wuu soo qaadaa, adiguna waxaad arkaysaa meesha ay joogto." },
+          { "title": "Koodhka qaataha", "body": "Marka darawalku gaaro, qaatuhu wuxuu helayaa koodh 4-lambar ah. Darawalku wuxuu geliyaa koodhka ka hor intuusan xirmada dhiibin." }
+        ],
+        "cta_label": "Wax badan ka ogow dirista"
+      },
+      "en": {
+        "title": "A delivery, step by step",
+        "steps": [
+          { "title": "Describe the parcel", "body": "Choose the category (food, parcel, documents, pharmacy, shopping) and the size (small, medium, large). Add the recipient's name and number." },
+          { "title": "Choose the places and confirm", "body": "Where to collect and where to deliver. The fare is shown first." },
+          { "title": "Track the parcel", "body": "The driver collects it, and you see where it is." },
+          { "title": "Recipient code", "body": "When the driver arrives, the recipient receives a 4-digit code. The driver enters the code before handing over the parcel." }
+        ],
+        "cta_label": "More about delivery"
+      }
+    },
+    {
+      "type": "faq",
+      "limit": 6,
+      "more_href": "/faq",
+      "so": { "title": "Su'aalaha badanaa la isweydiiyo", "more_label": "Arag dhammaan su'aalaha" },
+      "en": { "title": "Frequently asked questions", "more_label": "See all questions" }
+    }
+  ]
+}

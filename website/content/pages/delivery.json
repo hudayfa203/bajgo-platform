@@ -1,0 +1,75 @@
+{
+  "slug": "delivery",
+  "title_so": "BajGo Delivery",
+  "title_en": "BajGo Delivery",
+  "seo": {
+    "description_so": "U dir Garoowe oo dhan daqiiqado gudahood. Xirmooyin, cunto, dukumeenti iyo alaab ilaa 30 kg, oo leh koodh xaqiijin ah oo qaataha.",
+    "description_en": "Send it across Garowe in minutes. Parcels, food, documents and shopping up to 30 kg, with a recipient verification code."
+  },
+  "published": true,
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "page",
+      "primary_href": "/download",
+      "secondary_href": "/pricing",
+      "so": {
+        "eyebrow": "BajGo Delivery · Dirid",
+        "headline": "U dir Garoowe oo dhan daqiiqado gudahood.",
+        "sub": "Dir xirmooyin, cunto, dukumeenti iyo alaab. Isla darawallada BajGo ayaa qaada oo gaarsiiya, qiimahana waxaad arkaysaa ka hor.",
+        "primary_label": "Soo deji app-ka",
+        "secondary_label": "Arag qiimaha"
+      },
+      "en": {
+        "eyebrow": "BajGo Delivery",
+        "headline": "Send it across Garowe in minutes.",
+        "sub": "Send packages, food, documents and shopping. The same BajGo drivers collect and deliver, and you see the fare first.",
+        "primary_label": "Get the app",
+        "secondary_label": "See pricing"
+      }
+    },
+    {
+      "type": "steps",
+      "layout": "row",
+      "icons": ["parcel", "pin", "track", "check"],
+      "so": {
+        "title": "Sida diristu u shaqeyso",
+        "steps": [
+          { "title": "Sharax xirmada", "body": "Dooro nooca iyo cabbirka, qor magaca iyo lambarka qaataha, oo haddii aad rabto sawir ku dar." },
+          { "title": "Dooro meelaha", "body": "Meesha laga qaadayo iyo meesha la geynayo. Qiimaha ayaa lagu tusayaa ka hor intaadan xaqiijin." },
+          { "title": "La soco xirmada", "body": "Darawalku wuu soo qaadaa, adiguna waxaad arkaysaa meesha ay joogto si toos ah." },
+          { "title": "Xaqiijinta qaataha", "body": "Qaatuhu wuxuu helayaa koodh 4-lambar ah oo fariin ah. Darawalku wuxuu geliyaa ka hor intuusan dhiibin." }
+        ]
+      },
+      "en": {
+        "title": "How a delivery works",
+        "steps": [
+          { "title": "Describe the parcel", "body": "Choose the category and size, add the recipient's name and number, and a photo if you like." },
+          { "title": "Choose the places", "body": "Where to collect and where to deliver. The fare is shown before you confirm." },
+          { "title": "Track the parcel", "body": "The driver collects it, and you see where it is live." },
+          { "title": "Recipient verification", "body": "The recipient receives a 4-digit code by SMS. The driver enters it before handing over." }
+        ]
+      }
+    },
+    {
+      "type": "component",
+      "key": "delivery_rules",
+      "so": { "title": "Noocyada, cabbirrada iyo waxyaabaha mamnuuca ah", "body": "Culeyska ugu badan waa 30 kg. Xirmadu waa inay ku habboonaato kursiga dambe ee Bajaajka oo si fiican loo xidhay." },
+      "en": { "title": "Categories, sizes and prohibited items", "body": "The maximum weight is 30 kg. The parcel must fit on the rear seat of a Bajaaj and be properly packaged." }
+    },
+    {
+      "type": "component",
+      "key": "fare_calculator",
+      "so": { "title": "Qiyaas qiimaha dirista", "body": "Qiimaha dirista wuxuu la mid yahay qiimaha safarka: wuxuu ku salaysan yahay masaafada." },
+      "en": { "title": "Estimate a delivery fare", "body": "Delivery pricing is the same as ride pricing: it is based on distance." }
+    },
+    {
+      "type": "cta",
+      "tone": "night",
+      "href": "/delivery-terms",
+      "secondary_href": "/download",
+      "so": { "title": "Akhri shuruudaha dirista", "body": "Waxa aan masuul ka nahay, waxa aan masuul ka ahayn, iyo sida loo wajaho xirmooyinka aan la gaarsiin karin.", "label": "Shuruudaha dirista", "secondary_label": "Soo deji app-ka" },
+      "en": { "title": "Read the delivery terms", "body": "What we are responsible for, what we are not, and what happens when a parcel cannot be delivered.", "label": "Delivery terms", "secondary_label": "Get the app" }
+    }
+  ]
+}

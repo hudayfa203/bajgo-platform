@@ -1,0 +1,5 @@
+"NSLocationWhenInUseUsageDescription" = "BajGo uses your location to find your pickup point and show nearby Bajaaj.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "BajGo uses your location to find your pickup point and show nearby Bajaaj.";
+"NSCameraUsageDescription" = "BajGo uses the camera to photograph a package you are sending.";
+"NSPhotoLibraryUsageDescription" = "BajGo uses your photos to attach a picture of a package you are sending.";
+"NSPhotoLibraryAddUsageDescription" = "BajGo saves receipts and delivery photos you choose to keep.";

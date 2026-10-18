@@ -1,0 +1,44 @@
+{
+  "brand": "BajGo",
+  "business": "Bajaaj Ride & Delivery",
+  "city_en": "Garowe, Puntland, Somalia",
+  "city_so": "Garoowe, Puntland, Soomaaliya",
+  "web": "baj-go.com",
+  "email": "info@baj-go.com",
+  "phone": "+252 [number]",
+  "slogan_main_en": "Ride. Send. BajGo.",
+  "slogan_main_so": "Fuul. Dir. BajGo.",
+  "tagline_en": "Garowe, one tap away.",
+  "tagline_so": "Meel kasta, waqti kasta.",
+  "mission_en": "To make getting around and sending things in Garowe safe, fair and instant, while giving Bajaaj drivers steady, dignified income.",
+  "mission_so": "Inaan safarka iyo u dirista alaabta Garoowe ka dhigno mid ammaan ah, caddaalad ah oo degdeg ah, iyadoo darawallada Bajaajta la siinayo dakhli joogto ah oo sharaf leh.",
+  "vision_en": "To become the most trusted mobility network in Puntland and across Somali cities.",
+  "vision_so": "Inaan noqonno shabakadda gaadiidka ee ugu kalsoonida badan Puntland iyo magaalooyinka Soomaaliyeed.",
+  "personality": [
+    ["Dependable", "Shows up when promised. Fares shown before the trip, no surprises."],
+    ["Quick", "Fast to book, fast to arrive, fast to read."],
+    ["Warm", "Greets people like a neighbour. Respectful to riders and drivers alike."],
+    ["Proud of Garowe", "Local streets, local drivers, local language first."],
+    ["Modern", "Clean, confident technology that anyone can use."]
+  ],
+  "voice": [
+    ["Clear", "Short sentences. One idea per line. Prices and times up front."],
+    ["Friendly, not casual", "Warm greetings, no heavy slang, never sarcastic."],
+    ["Bilingual by default", "Somali first for local audiences, English alongside."],
+    ["Respectful", "Drivers are partners, never 'workers'. Riders are guests."]
+  ],
+  "description_en": "BajGo is Garowe's on-demand Bajaaj app for rides and deliveries. Book a Bajaaj or send a parcel in a few taps, see your fare before you go, and track your driver live.",
+  "description_so": "BajGo waa app-ka Bajaajta ee Garoowe ee safarka iyo dirista alaabta. Ku dalbo Bajaaj ama dir xirmo dhowr taabasho, arag lacagta ka hor intaadan bixin, oo si toos ah ula soco darawalkaaga.",
+  "bio_en": "Bajaaj rides and deliveries in Garowe. Fair fares, live tracking, local drivers. baj-go.com",
+  "bio_so": "Safar iyo dirid Bajaaj ah oo Garoowe ah. Qiimo cad, la socod toos ah, darawallo deegaanka ah. baj-go.com",
+  "campaigns": {
+    "launch": {"en": "BajGo is here. Garowe, one tap away.", "so": "BajGo waa yimid. Garoowe, hal taabasho."},
+    "ride": {"en": "Need a Bajaaj? Tap. It's on the way.", "so": "Bajaaj ma u baahan tahay? Taabo, waa kuu soo socotaa."},
+    "delivery": {"en": "Send it across Garowe in minutes.", "so": "U dir Garoowe oo dhan daqiiqado gudahood."},
+    "driver": {"en": "Drive with BajGo. More trips. Fair pay. Your Bajaaj.", "so": "La shaqee BajGo. Safarro badan, dakhli caddaalad ah, Bajaajkaaga."},
+    "discount": {"en": "First 3 rides: [X]% off with code [CODE].", "so": "Saddexda safar ee ugu horreeya: [X]% dhimis, koodh [CODE]."},
+    "download": {"en": "Get the app. Book your first ride today.", "so": "Soo deji app-ka. Dalbo safarkaaga ugu horreeya maanta."}
+  },
+  "service_labels": {"ride_en": "RIDE", "ride_so": "SAFAR", "delivery_en": "DELIVERY", "delivery_so": "DIRID"},
+  "ui": {"welcome_so": "Soo dhawoow", "where_to_en": "Where to?", "where_to_so": "Xaggee u socotaa?", "book_ride": "Book a ride", "send_parcel": "Send a parcel"}
+}

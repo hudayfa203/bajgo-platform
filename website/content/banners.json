@@ -1,0 +1,16 @@
+[
+  {
+    "id": "banner-launch",
+    "placement": "web_home_hero",
+    "title_so": "BajGo waa yimid.",
+    "title_en": "BajGo is here.",
+    "body_so": "Garoowe, hal taabasho.",
+    "body_en": "Garowe, one tap away.",
+    "image_url": null,
+    "link_url": "/download",
+    "starts_at": null,
+    "ends_at": null,
+    "sort_order": 0,
+    "published": false
+  }
+]

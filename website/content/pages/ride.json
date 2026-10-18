@@ -1,0 +1,82 @@
+{
+  "slug": "ride",
+  "title_so": "BajGo Ride",
+  "title_en": "BajGo Ride",
+  "seo": {
+    "description_so": "Bajaaj ma u baahan tahay? Taabo, waa kuu soo socotaa. Ku dalbo Bajaaj Garoowe, arag qiimaha ka hor, oo la soco darawalkaaga.",
+    "description_en": "Need a Bajaaj? Tap. It's on the way. Book a Bajaaj in Garowe, see the fare first, and track your driver."
+  },
+  "published": true,
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "page",
+      "primary_href": "/download",
+      "secondary_href": "/pricing",
+      "so": {
+        "eyebrow": "BajGo Ride · Safar",
+        "headline": "Bajaaj ma u baahan tahay? Taabo, waa kuu soo socotaa.",
+        "sub": "Ku dalbo Bajaaj meel kasta oo aad u socoto Garoowe. Qiimaha waxaad arkaysaa ka hor intaadan xaqiijin.",
+        "primary_label": "Soo deji app-ka",
+        "secondary_label": "Arag qiimaha"
+      },
+      "en": {
+        "eyebrow": "BajGo Ride",
+        "headline": "Need a Bajaaj? Tap. It's on the way.",
+        "sub": "Book a Bajaaj to take you anywhere in Garowe. You see the fare before you confirm.",
+        "primary_label": "Get the app",
+        "secondary_label": "See pricing"
+      }
+    },
+    {
+      "type": "steps",
+      "layout": "row",
+      "icons": ["pin", "fare", "bajaaj", "star"],
+      "so": {
+        "title": "Sida safarku u shaqeeyo",
+        "steps": [
+          { "title": "Dooro meelaha", "body": "Qor meesha aad joogto iyo meesha aad u socoto. Haddii cinwaan sax ah aadan haysan, biinka khariidadda ka dhig oo qor calaamad u dhow." },
+          { "title": "Xaqiiji qiimaha", "body": "Qiimaha oo dhammaystiran ayaa lagu tusayaa. Xaqiiji haddii aad ku qanacsan tahay." },
+          { "title": "Darawalku waa soo socdaa", "body": "Darawalka ugu dhow ayaa helaya codsigaaga. Waxaad arkaysaa magaciisa, koodhka gaariga, taarikada iyo meesha uu joogo." },
+          { "title": "Bixi oo qiimee", "body": "Bixi lacag caddaan ah marka safarku dhammaado. Qiimee darawalka si aan adeegga u wanaajino." }
+        ]
+      },
+      "en": {
+        "title": "How a ride works",
+        "steps": [
+          { "title": "Choose your places", "body": "Type where you are and where you're going. If you don't have an exact address, drop a pin and add a nearby landmark." },
+          { "title": "Confirm the fare", "body": "The full fare is shown. Confirm if you're happy with it." },
+          { "title": "Your driver is on the way", "body": "The nearest driver receives your request. You see their name, fleet code, plate and live location." },
+          { "title": "Pay and rate", "body": "Pay cash when the trip ends. Rate your driver to help us keep the service good." }
+        ]
+      }
+    },
+    {
+      "type": "rich_text",
+      "tone": "cloud",
+      "width": "prose",
+      "so": {
+        "title": "Waxa aad ka filan karto safar kasta",
+        "body": "- Qiimo cad oo ku salaysan masaafada waddada, la tusay ka hor intaadan xaqiijin.\n- Darawal la hubiyay oo leh koodh gaari oo muuqda (tusaale BG-0142).\n- La socod toos ah oo khariidad ah, iyo xiriirin aad la wadaagi karto qof aad ku kalsoon tahay.\n- Badhanka gurmadka (SOS) app-ka dhexdiisa haddii wax dhacaan.\n- Lacag caddaan ah; lacag-bixinta mobaylka waa la soo dari doonaa marka ay diyaar noqoto."
+      },
+      "en": {
+        "title": "What to expect on every ride",
+        "body": "- A clear fare based on road distance, shown before you confirm.\n- A verified driver with a visible fleet code (for example BG-0142).\n- Live tracking on a map, and a link you can share with someone you trust.\n- An in-app emergency (SOS) button if something goes wrong.\n- Cash payment; mobile money will be added when it is ready."
+      }
+    },
+    {
+      "type": "component",
+      "key": "fare_calculator",
+      "so": { "title": "Qiyaas qiimaha safarkaaga", "body": "Qor masaafada oo arag inta uu safarku kugu kacayo." },
+      "en": { "title": "Estimate your fare", "body": "Type a distance and see what the trip would cost." }
+    },
+    {
+      "type": "cta",
+      "tone": "blue",
+      "href": "/download",
+      "show_download": true,
+      "so": { "title": "Dalbo safarkaaga ugu horreeya maanta.", "label": "Soo deji app-ka" },
+      "en": { "title": "Book your first ride today.", "label": "Get the app" }
+    }
+  ]
+}

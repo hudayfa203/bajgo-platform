@@ -1,0 +1,46 @@
+{
+  "slug": "about",
+  "title_so": "Ku saabsan BajGo",
+  "title_en": "About BajGo",
+  "seo": {
+    "description_so": "BajGo waa shirkad Garoowe ah oo bixisa safar iyo dirid Bajaaj ah. Baro himiladayada iyo sida aan u shaqeyno.",
+    "description_en": "BajGo is a Garowe company offering Bajaaj rides and deliveries. Learn about our mission and how we work."
+  },
+  "published": true,
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "page",
+      "so": {
+        "eyebrow": "Ku saabsan BajGo",
+        "headline": "Darawallo deegaanka ah. Qiimo cad. Garoowe marka hore.",
+        "sub": "BajGo waa app-ka Bajaajta ee Garoowe ee safarka iyo dirista alaabta. Waxaan ka shaqeynaa in safarka iyo dirista ay noqdaan kuwo ammaan ah, caddaalad ah oo degdeg ah."
+      },
+      "en": {
+        "eyebrow": "About BajGo",
+        "headline": "Local drivers. Fair fares. Garowe first.",
+        "sub": "BajGo is Garowe's on-demand Bajaaj app for rides and deliveries. We work to make getting around and sending things safe, fair and instant."
+      }
+    },
+    {
+      "type": "rich_text",
+      "width": "prose",
+      "so": {
+        "title": "Himiladayada",
+        "body": "Inaan safarka iyo u dirista alaabta Garoowe ka dhigno mid ammaan ah, caddaalad ah oo degdeg ah, iyadoo darawallada Bajaajta la siinayo dakhli joogto ah oo sharaf leh.\n\n## Aragtidayada\n\nInaan noqonno shabakadda gaadiidka ee ugu kalsoonida badan Puntland iyo magaalooyinka Soomaaliyeed.\n\n## Sida aan u shaqeyno\n\n- **La isku halleyn karo.** Waxaan yimaadnaa marka la ballamo. Qiimaha waxaa la tusaa ka hor safarka, wax yaab ah ma jiro.\n- **Degdeg.** Dalbasho degdeg ah, imaatin degdeg ah, akhris degdeg ah.\n- **Diirran.** Dadka waxaan u salaamnaa sida deris. Waxaan ixtiraamnaa rakaabka iyo darawallada labadaba.\n- **Ku faanka Garoowe.** Waddooyinka deegaanka, darawallada deegaanka, luqadda deegaanka marka hore.\n- **Casri.** Tiknoolajiyad nadiif ah oo qof kasta isticmaali karo.\n\n## Darawallada waa shuraako\n\nIsla darawalladu waxay qabtaan safarrada iyo diristaba. Waxay arkaan dakhliga safar kasta, waxayna shaqeeyaan waqtiga iyaga ku habboon."
+      },
+      "en": {
+        "title": "Our mission",
+        "body": "To make getting around and sending things in Garowe safe, fair and instant, while giving Bajaaj drivers steady, dignified income.\n\n## Our vision\n\nTo become the most trusted mobility network in Puntland and across Somali cities.\n\n## How we work\n\n- **Dependable.** We show up when promised. Fares are shown before the trip, no surprises.\n- **Quick.** Fast to book, fast to arrive, fast to read.\n- **Warm.** We greet people like a neighbour, and respect riders and drivers alike.\n- **Proud of Garowe.** Local streets, local drivers, local language first.\n- **Modern.** Clean, confident technology that anyone can use.\n\n## Drivers are partners\n\nThe same drivers do rides and deliveries. They see the earnings for every trip and work the hours that suit them."
+      }
+    },
+    {
+      "type": "cta",
+      "tone": "blue",
+      "href": "/download",
+      "secondary_href": "/contact",
+      "so": { "title": "Diyaar ma u tahay inaad isku daydo?", "body": "Soo deji app-ka ama nala soo xiriir haddii aad su'aal qabto.", "label": "Soo deji app-ka", "secondary_label": "Nala soo xiriir" },
+      "en": { "title": "Ready to try it?", "body": "Get the app, or contact us if you have a question.", "label": "Get the app", "secondary_label": "Contact us" }
+    }
+  ]
+}

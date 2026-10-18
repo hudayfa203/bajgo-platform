@@ -1,0 +1,108 @@
+import { pgTable, uuid, text, timestamp, smallint, integer, numeric, jsonb, bigserial } from 'drizzle-orm/pg-core';
+import { sql } from 'drizzle-orm';
+import { serviceType, bookingStatus, deliveryCategory, paymentMethod, offerStatus } from './enums';
+import { geoPoint } from './types';
+import { users } from './identity';
+import { vehicles, zones, pricingVersions } from './drivers';
+
+export const bookings = pgTable('bookings', {
+  id: uuid('id').primaryKey().default(sql`uuid_generate_v4()`),
+  reference: text('reference').notNull(),
+  service: serviceType('service').notNull(),
+  status: bookingStatus('status').notNull().default('quoted'),
+  customerId: uuid('customer_id').notNull().references(() => users.id),
+  driverId: uuid('driver_id').references(() => users.id),
+  vehicleId: uuid('vehicle_id').references(() => vehicles.id),
+  zoneId: uuid('zone_id').references(() => zones.id),
+  pickupLocation: geoPoint('pickup_location').notNull(),
+  pickupAddress: text('pickup_address'),
+  pickupLandmark: text('pickup_landmark'),
+  dropoffLocation: geoPoint('dropoff_location').notNull(),
+  dropoffAddress: text('dropoff_address'),
+  dropoffLandmark: text('dropoff_landmark'),
+  routePolyline: text('route_polyline'),
+  routeDistanceM: integer('route_distance_m'),
+  routeDurationS: integer('route_duration_s'),
+  pricingVersionId: uuid('pricing_version_id').references(() => pricingVersions.id),
+  quotedFareCents: integer('quoted_fare_cents').notNull().default(0),
+  finalFareCents: integer('final_fare_cents'),
+  tipCents: integer('tip_cents').notNull().default(0),
+  discountCents: integer('discount_cents').notNull().default(0),
+  promotionId: uuid('promotion_id'),
+  commissionPct: numeric('commission_pct', { precision: 5, scale: 2 }),
+  commissionCents: integer('commission_cents'),
+  paymentMethod: paymentMethod('payment_method').notNull().default('cash'),
+  fareBreakdown: jsonb('fare_breakdown').notNull().default({}),
+  deliveryCategory: deliveryCategory('delivery_category'),
+  senderName: text('sender_name'),
+  senderPhone: text('sender_phone'),
+  recipientName: text('recipient_name'),
+  recipientPhone: text('recipient_phone'),
+  packageDescription: text('package_description'),
+  packageSize: text('package_size'),
+  packageWeightKg: numeric('package_weight_kg', { precision: 5, scale: 1 }),
+  packagePhotoUrl: text('package_photo_url'),
+  deliveryInstructions: text('delivery_instructions'),
+  proofPhotoUrl: text('proof_photo_url'),
+  recipientOtpVerifiedAt: timestamp('recipient_otp_verified_at', { withTimezone: true }),
+  scheduledFor: timestamp('scheduled_for', { withTimezone: true }),
+  requestedAt: timestamp('requested_at', { withTimezone: true }),
+  acceptedAt: timestamp('accepted_at', { withTimezone: true }),
+  arrivedAt: timestamp('arrived_at', { withTimezone: true }),
+  startedAt: timestamp('started_at', { withTimezone: true }),
+  completedAt: timestamp('completed_at', { withTimezone: true }),
+  cancelledAt: timestamp('cancelled_at', { withTimezone: true }),
+  cancellationReason: text('cancellation_reason'),
+  cancellationFeeCents: integer('cancellation_fee_cents').notNull().default(0),
+  waitingSeconds: integer('waiting_seconds').notNull().default(0),
+  actualDistanceM: integer('actual_distance_m'),
+  customerRating: smallint('customer_rating'),
+  driverRating: smallint('driver_rating'),
+  customerComment: text('customer_comment'),
+  driverComment: text('driver_comment'),
+  shareToken: text('share_token').unique(),
+  idempotencyKey: text('idempotency_key').unique(),
+  metadata: jsonb('metadata').notNull().default({}),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+});
+export type BookingRow = typeof bookings.$inferSelect;
+
+export const bookingStatusHistory = pgTable('booking_status_history', {
+  id: bigserial('id', { mode: 'number' }).primaryKey(),
+  bookingId: uuid('booking_id').notNull().references(() => bookings.id, { onDelete: 'cascade' }),
+  fromStatus: bookingStatus('from_status'),
+  toStatus: bookingStatus('to_status').notNull(),
+  actorId: uuid('actor_id').references(() => users.id),
+  actorRole: text('actor_role').notNull(),
+  reason: text('reason'),
+  location: geoPoint('location'),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const dispatchOffers = pgTable('dispatch_offers', {
+  id: uuid('id').primaryKey().default(sql`uuid_generate_v4()`),
+  bookingId: uuid('booking_id').notNull().references(() => bookings.id, { onDelete: 'cascade' }),
+  driverId: uuid('driver_id').notNull().references(() => users.id),
+  round: smallint('round').notNull().default(1),
+  radiusM: integer('radius_m').notNull(),
+  etaSeconds: integer('eta_seconds'),
+  distanceM: integer('distance_m'),
+  status: offerStatus('status').notNull().default('pending'),
+  offeredAt: timestamp('offered_at', { withTimezone: true }).notNull().defaultNow(),
+  expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  respondedAt: timestamp('responded_at', { withTimezone: true }),
+  reason: text('reason'),
+});
+export type OfferRow = typeof dispatchOffers.$inferSelect;
+
+export const ratings = pgTable('ratings', {
+  id: uuid('id').primaryKey().default(sql`uuid_generate_v4()`),
+  bookingId: uuid('booking_id').notNull().references(() => bookings.id, { onDelete: 'cascade' }),
+  raterId: uuid('rater_id').notNull().references(() => users.id),
+  rateeId: uuid('ratee_id').notNull().references(() => users.id),
+  score: smallint('score').notNull(),
+  tags: text('tags').array().notNull().default(sql`'{}'`),
+  comment: text('comment'),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+});

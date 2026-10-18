@@ -1,0 +1,23 @@
+BajGo colour palette
+
+Name | Role | HEX | RGB | CMYK
+BajGo Blue | Primary | #1E4AD6 | rgb(30, 74, 214) | cmyk(86, 65, 0, 16)
+Garowe Night | Secondary | #0A1230 | rgb(10, 18, 48) | cmyk(79, 63, 0, 81)
+Bajaaj Saffron | Accent | #FFC21A | rgb(255, 194, 26) | cmyk(0, 24, 90, 0)
+Sky | Support | #9DB8FF | rgb(157, 184, 255) | cmyk(38, 28, 0, 0)
+Deep Blue | Support | #1638A8 | rgb(22, 56, 168) | cmyk(87, 67, 0, 34)
+Cloud | Background | #F3F6FC | rgb(243, 246, 252) | cmyk(4, 2, 0, 1)
+Sand | Background | #FBF6EA | rgb(251, 246, 234) | cmyk(0, 2, 7, 2)
+Slate | Neutral | #4B556E | rgb(75, 85, 110) | cmyk(32, 23, 0, 57)
+Mist | Neutral | #D9DFEC | rgb(217, 223, 236) | cmyk(8, 6, 0, 7)
+Success | Status | #13A35A | rgb(19, 163, 90) | cmyk(88, 0, 45, 36)
+Danger | Status | #D93A3F | rgb(217, 58, 63) | cmyk(0, 73, 71, 15)
+
+Dark mode
+Name | HEX | RGB | CMYK
+Dark background | #060B1C | rgb(6, 11, 28) | cmyk(79, 61, 0, 89)
+Dark surface | #0F1833 | rgb(15, 24, 51) | cmyk(71, 53, 0, 80)
+Dark surface 2 | #17224A | rgb(23, 34, 74) | cmyk(69, 54, 0, 71)
+Blue (dark mode) | #5C80FF | rgb(92, 128, 255) | cmyk(64, 50, 0, 0)
+Text (dark) | #F3F6FC | rgb(243, 246, 252) | cmyk(4, 2, 0, 1)
+Text 2 (dark) | #A9B4CF | rgb(169, 180, 207) | cmyk(18, 13, 0, 19)

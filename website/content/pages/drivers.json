@@ -1,0 +1,108 @@
+{
+  "slug": "drivers",
+  "title_so": "Noqo darawal",
+  "title_en": "Become a driver",
+  "seo": {
+    "description_so": "La shaqee BajGo. Safarro badan, dakhli caddaalad ah, Bajaajkaaga. Baro faa'iidooyinka, shuruudaha iyo tallaabooyinka isdiiwaangelinta.",
+    "description_en": "Drive with BajGo. More trips. Fair pay. Your Bajaaj. Learn the benefits, requirements and registration steps."
+  },
+  "published": true,
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "saffron",
+      "primary_href": "/drivers/apply",
+      "secondary_href": "/driver-terms",
+      "so": {
+        "eyebrow": "Darawallada",
+        "headline": "La shaqee BajGo. Safarro badan, dakhli caddaalad ah, Bajaajkaaga.",
+        "sub": "Darawallada BajGo waa shuraako. Waxaad aragtaa dakhliga safar kasta ka hor intaadan aqbalin, oo waxaad shaqaysaa waqtiga kugu habboon.",
+        "primary_label": "Hadda codso",
+        "secondary_label": "Shuruudaha darawalka"
+      },
+      "en": {
+        "eyebrow": "Drivers",
+        "headline": "Drive with BajGo. More trips. Fair pay. Your Bajaaj.",
+        "sub": "BajGo drivers are partners. You see the earnings for every trip before you accept, and you work the hours that suit you.",
+        "primary_label": "Apply now",
+        "secondary_label": "Driver terms"
+      }
+    },
+    {
+      "type": "steps",
+      "layout": "row",
+      "icons": ["cash", "phone", "star", "shield"],
+      "so": {
+        "title": "Faa'iidooyinka",
+        "steps": [
+          { "title": "Dakhli cad", "body": "Safar kasta waxaad aragtaa qiimaha iyo dakhligaaga ka hor intaadan aqbalin. Komishanka BajGo wuu muuqdaa." },
+          { "title": "Safarro iyo dirid", "body": "Isla app-ka ayaad ka helaysaa safarro rakaab ah iyo dirid xirmooyin, waqti kasta oo aad online tahay." },
+          { "title": "Waqtigaaga", "body": "Online noqo markaad rabto, offline noqo markaad rabto. Ma jiraan saacado qasab ah." },
+          { "title": "Taageero", "body": "Koox Garoowe jooga ayaa ku taageeraysa. Waxaad helaysaa badhanka gurmadka iyo taageero app-ka dhexdiisa." }
+        ]
+      },
+      "en": {
+        "title": "Benefits",
+        "steps": [
+          { "title": "Clear earnings", "body": "For every trip you see the fare and your earnings before you accept. BajGo's commission is visible." },
+          { "title": "Rides and deliveries", "body": "The same app brings you passenger rides and parcel deliveries whenever you are online." },
+          { "title": "Your hours", "body": "Go online when you want, go offline when you want. There are no required hours." },
+          { "title": "Support", "body": "A team based in Garowe supports you. You get an emergency button and in-app support." }
+        ]
+      }
+    },
+    {
+      "type": "rich_text",
+      "tone": "cloud",
+      "width": "prose",
+      "so": {
+        "title": "Shuruudaha",
+        "body": "Si aad darawal BajGo u noqoto waxaad u baahan tahay:\n\n- Aqoonsi rasmi ah oo shaqeynaya.\n- Shati wadis oo shaqeynaya.\n- Bajaaj xaalad wanaagsan ku jira, oo leh diiwaangelin iyo caymis haddii ay jiraan.\n- Taleefan Android ah oo internet leh.\n- Lambar taleefan oo xiriir degdeg ah (qof ehel ah ama saaxiib).\n- Dhaqan wanaagsan oo ixtiraam leh rakaabka iyo qaatayaasha.\n\nDarawallada aan Bajaaj lahayn waxay weli codsan karaan; waxaan la xiriiri doonnaa marka fursado jiraan."
+      },
+      "en": {
+        "title": "Requirements",
+        "body": "To become a BajGo driver you need:\n\n- A valid official ID.\n- A valid driving licence.\n- A Bajaaj in good condition, with registration and insurance where they exist.\n- An Android phone with internet.\n- An emergency contact number (a family member or friend).\n- A respectful attitude towards riders and recipients.\n\nDrivers without a Bajaaj can still apply; we will get in touch when there are opportunities."
+      }
+    },
+    {
+      "type": "steps",
+      "layout": "list",
+      "icons": ["phone", "id", "check", "bajaaj"],
+      "cta_href": "/drivers/apply",
+      "so": {
+        "title": "Tallaabooyinka isdiiwaangelinta",
+        "steps": [
+          { "title": "Buuxi foomka", "body": "Buuxi foomka isdiiwaangelinta ee boggan. Waxay qaadataa dhowr daqiiqo." },
+          { "title": "Waan ku soo wacaynaa", "body": "Xubin ka tirsan kooxda BajGo ayaa ku soo wici doonta si ay kuula qabanqaabiso hubinta dukumeentiyada Garoowe." },
+          { "title": "Hubinta", "body": "Waxaan hubinaa aqoonsigaaga, shatigaaga iyo Bajaajkaaga. Waxaad helaysaa koodh gaari oo BajGo ah." },
+          { "title": "Bilow", "body": "Soo deji app-ka darawalka, online noqo, oo aqbal safarkaaga ugu horreeya." }
+        ],
+        "cta_label": "Hadda codso"
+      },
+      "en": {
+        "title": "Registration steps",
+        "steps": [
+          { "title": "Fill in the form", "body": "Complete the registration form on this website. It takes a few minutes." },
+          { "title": "We call you", "body": "A BajGo team member will call to arrange document checks in Garowe." },
+          { "title": "Verification", "body": "We check your ID, licence and Bajaaj. You receive a BajGo fleet code." },
+          { "title": "Start", "body": "Download the driver app, go online, and accept your first trip." }
+        ],
+        "cta_label": "Apply now"
+      }
+    },
+    {
+      "type": "faq",
+      "category": "drivers",
+      "more_href": "/faq",
+      "so": { "title": "Su'aalaha darawallada", "more_label": "Dhammaan su'aalaha" },
+      "en": { "title": "Driver questions", "more_label": "All questions" }
+    },
+    {
+      "type": "cta",
+      "tone": "saffron",
+      "href": "/drivers/apply",
+      "so": { "title": "Diyaar ma u tahay inaad la shaqayso BajGo?", "body": "Buuxi foomka, waana ku soo wici doonnaa.", "label": "Hadda codso" },
+      "en": { "title": "Ready to drive with BajGo?", "body": "Fill in the form and we will call you.", "label": "Apply now" }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "home",
+  "title_so": "Bogga hore",
+  "title_en": "Home",
+  "seo": {
+    "title_so": "BajGo — Safar iyo dirid Bajaaj ah oo Garoowe ah",
+    "title_en": "BajGo — Bajaaj rides and deliveries in Garowe",
+    "description_so": "BajGo waa app-ka Bajaajta ee Garoowe ee safarka iyo dirista alaabta. Ku dalbo Bajaaj ama dir xirmo dhowr taabasho, arag lacagta ka hor intaadan bixin, oo si toos ah ula soco darawalkaaga.",
+    "description_en": "BajGo is Garowe's on-demand Bajaaj app for rides and deliveries. Book a Bajaaj or send a parcel in a few taps, see your fare before you go, and track your driver live."
+  },
+  "published": true,
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "home-hero",
+      "variant": "home",
+      "primary_href": "/download",
+      "secondary_href": "/how-it-works",
+      "so": {
+        "eyebrow": "Fuul. Dir. BajGo.",
+        "headline": "Garoowe, hal taabasho.",
+        "sub": "Ku dalbo Bajaaj ama dir xirmo dhowr taabasho, arag lacagta ka hor intaadan bixin, oo si toos ah ula soco darawalkaaga.",
+        "primary_label": "Soo deji app-ka",
+        "secondary_label": "Sida uu u shaqeeyo"
+      },
+      "en": {
+        "eyebrow": "Ride. Send. BajGo.",
+        "headline": "Garowe, one tap away.",
+        "sub": "Book a Bajaaj or send a parcel in a few taps, see your fare before you go, and track your driver live.",
+        "primary_label": "Get the app",
+        "secondary_label": "How it works"
+      }
+    },
+    {
+      "type": "service_cards",
+      "id": "home-services",
+      "cards": [
+        { "key": "ride", "href": "/ride" },
+        { "key": "delivery", "href": "/delivery" }
+      ],
+      "so": {
+        "title": "Laba adeeg, hal app",
+        "cards": [
+          { "title": "BajGo Ride", "body": "Ku dalbo Bajaaj meel kasta oo aad u socoto.", "cta": "Dalbo safar" },
+          { "title": "BajGo Delivery", "body": "Dir xirmooyin, cunto, dukumeenti iyo alaab.", "cta": "Dir xirmo" }
+        ]
+      },
+      "en": {
+        "title": "Two services, one app",
+        "cards": [
+          { "title": "BajGo Ride", "body": "Book a Bajaaj to take you anywhere.", "cta": "Book a ride" },
+          { "title": "BajGo Delivery", "body": "Send packages, food, documents and shopping.", "cta": "Send a parcel" }
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "id": "home-how",
+      "layout": "row",
+      "icons": ["pin", "fare", "track"],
+      "cta_href": "/how-it-works",
+      "so": {
+        "title": "Sida uu u shaqeeyo",
+        "steps": [
+          { "title": "Dooro meesha", "body": "Qor meesha aad joogto iyo meesha aad u socoto, ama biinka khariidadda ka dhig." },
+          { "title": "Arag qiimaha", "body": "Qiimaha saxda ah ayaa lagu tusayaa ka hor intaadan xaqiijin. Wax yaab ah ma jiro." },
+          { "title": "La soco darawalkaaga", "body": "Arag darawalka, koodhka gaariga iyo meesha uu joogo si toos ah." }
+        ],
+        "cta_label": "Wax badan ka ogow"
+      },
+      "en": {
+        "title": "How it works",
+        "steps": [
+          { "title": "Choose your places", "body": "Type where you are and where you're going, or drop a pin on the map." },
+          { "title": "See your fare", "body": "The exact fare is shown before you confirm. No surprises." },
+          { "title": "Track your driver", "body": "See your driver, their fleet code and their live location." }
+        ],
+        "cta_label": "Learn more"
+      }
+    },
+    {
+      "type": "component",
+      "id": "home-fare",
+      "key": "fare_calculator",
+      "so": {
+        "title": "Qiimaha ka hor intaadan bixin",
+        "body": "Qiimaha bilowga waa $0.50 kiiloomitirkii, ugu yaraan $1.00. Qiimaha saxda ah ee waddadaada waxaad arkaysaa app-ka ka hor intaadan xaqiijin."
+      },
+      "en": {
+        "title": "Fare before you go",
+        "body": "Launch pricing is $0.50 per km with a $1.00 minimum. You see the exact fare for your route in the app before you confirm."
+      }
+    },
+    {
+      "type": "component",
+      "id": "home-download",
+      "key": "download",
+      "so": {
+        "title": "Soo deji app-ka. Dalbo safarkaaga ugu horreeya maanta.",
+        "body": "App-ka macmiilka wuxuu u shaqeeyaa Android iyo iPhone. Darawallada waxay helaan app gaar ah."
+      },
+      "en": {
+        "title": "Get the app. Book your first ride today.",
+        "body": "The customer app works on Android and iPhone. Drivers get a separate app."
+      }
+    },
+    {
+      "type": "cta",
+      "id": "home-drivers",
+      "tone": "saffron",
+      "href": "/drivers",
+      "secondary_href": "/drivers/apply",
+      "so": {
+        "title": "La shaqee BajGo. Safarro badan, dakhli caddaalad ah, Bajaajkaaga.",
+        "body": "Darawallada BajGo waa shuraako. Waxaad aragtaa dakhliga safar kasta, oo waxaad shaqaysaa waqtiga kugu habboon.",
+        "label": "Noqo darawal",
+        "secondary_label": "Hadda codso"
+      },
+      "en": {
+        "title": "Drive with BajGo. More trips. Fair pay. Your Bajaaj.",
+        "body": "BajGo drivers are partners. You see the earnings for every trip, and you work the hours that suit you.",
+        "label": "Become a driver",
+        "secondary_label": "Apply now"
+      }
+    },
+    {
+      "type": "steps",
+      "id": "home-safety",
+      "layout": "row",
+      "tone": "night",
+      "icons": ["id", "track", "shield"],
+      "cta_href": "/safety",
+      "so": {
+        "title": "Badbaado iyo kalsooni",
+        "steps": [
+          { "title": "Darawallo la hubiyay", "body": "Darawal kasta aqoonsigiisa, shatigiisa iyo Bajaajkiisa ayaa la hubiyaa ka hor intuusan bilaabin." },
+          { "title": "Koodh gaari oo muuqda", "body": "Isku hubi koodhka gaariga, sida BG-0142, ka hor intaadan fuulin." },
+          { "title": "Wadaag safarkaaga", "body": "U dir qof aad ku kalsoon tahay xiriirin uu kula socdo safarkaaga." }
+        ],
+        "cta_label": "Wax badan ka ogow badbaadada"
+      },
+      "en": {
+        "title": "Safety & trust",
+        "steps": [
+          { "title": "Verified drivers", "body": "Every driver's ID, licence and Bajaaj are checked before they start." },
+          { "title": "Visible fleet code", "body": "Check the fleet code, such as BG-0142, before you get in." },
+          { "title": "Share your trip", "body": "Send someone you trust a link to follow your trip." }
+        ],
+        "cta_label": "More about safety"
+      }
+    },
+    {
+      "type": "component",
+      "id": "home-testimonials",
+      "key": "testimonials",
+      "so": { "title": "Waxa dadku yiraahdaan" },
+      "en": { "title": "What people say" }
+    },
+    {
+      "type": "faq",
+      "id": "home-faq",
+      "limit": 4,
+      "more_href": "/faq",
+      "so": { "title": "Su'aalaha dadku weydiiyaan", "more_label": "Arag dhammaan su'aalaha" },
+      "en": { "title": "Questions people ask", "more_label": "See all questions" }
+    }
+  ]
+}

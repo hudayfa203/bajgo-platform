@@ -1,0 +1,59 @@
+{
+  "brand": {
+    "name": "BajGo",
+    "tagline_so": "Meel kasta, waqti kasta.",
+    "tagline_en": "Garowe, one tap away.",
+    "support_phone": "+252 [number]",
+    "support_email": "info@baj-go.com",
+    "website": "https://baj-go.com",
+    "address_so": "[Waddada], Garoowe, Puntland",
+    "address_en": "[Street], Garowe, Puntland"
+  },
+  "social": [
+    { "network": "Facebook", "handle": "@bajgo", "placeholder": true },
+    { "network": "Instagram", "handle": "@bajgo", "placeholder": true },
+    { "network": "TikTok", "handle": "@bajgo", "placeholder": true },
+    { "network": "X", "handle": "@bajgo", "placeholder": true }
+  ],
+  "delivery": {
+    "max_weight_kg": 30,
+    "sizes": {
+      "small": { "max_kg": 5, "label_so": "Yar", "label_en": "Small", "example_so": "Dukumeenti, cunto, dawo, bac yar", "example_en": "Documents, food, medicine, a small bag" },
+      "medium": { "max_kg": 15, "label_so": "Dhexdhexaad", "label_en": "Medium", "example_so": "Sanduuq dhexdhexaad ah, bacaha suuqa", "example_en": "A medium box, shopping bags" },
+      "large": { "max_kg": 30, "label_so": "Weyn", "label_en": "Large", "example_so": "Sanduuq weyn oo ku habboon kursiga dambe", "example_en": "A large box that fits on the rear seat" }
+    },
+    "categories": [
+      { "key": "food", "label_so": "Cunto", "label_en": "Food" },
+      { "key": "shopping", "label_so": "Alaabta suuqa", "label_en": "Shopping" },
+      { "key": "parcel", "label_so": "Xirmo", "label_en": "Parcel" },
+      { "key": "document", "label_so": "Dukumeenti", "label_en": "Documents" },
+      { "key": "pharmacy", "label_so": "Dawo", "label_en": "Pharmacy" },
+      { "key": "other", "label_so": "Kale", "label_en": "Other" }
+    ],
+    "prohibited_items_so": ["Daroogo", "Hub", "Lacag caddaan ah oo badan", "Xayawaan nool", "Wax burbura oo aan la xidhin"],
+    "prohibited_items_en": ["Illegal drugs", "Weapons", "Large amounts of cash", "Live animals", "Unpackaged fragile items"],
+    "recipient_otp": true
+  },
+  "pricing": {
+    "currency": "USD",
+    "ride": {
+      "rate_per_km_cents": 50,
+      "minimum_fare_cents": 100,
+      "base_fee_cents": 0,
+      "waiting_fee_per_min_cents": 0,
+      "free_waiting_minutes": 3,
+      "rounding_cents": 10,
+      "version_name": "Launch pricing — Ride"
+    },
+    "delivery": {
+      "rate_per_km_cents": 50,
+      "minimum_fare_cents": 100,
+      "base_fee_cents": 0,
+      "waiting_fee_per_min_cents": 0,
+      "free_waiting_minutes": 3,
+      "rounding_cents": 10,
+      "version_name": "Launch pricing — Delivery"
+    },
+    "example_distances_km": [1, 2, 3, 4, 6, 10]
+  }
+}

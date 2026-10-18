@@ -1,0 +1,162 @@
+[
+  {
+    "id": "faq-general-what",
+    "category": "general",
+    "question_so": "BajGo waa maxay?",
+    "answer_so": "BajGo waa app-ka Bajaajta ee Garoowe ee safarka iyo dirista alaabta. Ku dalbo Bajaaj ama dir xirmo dhowr taabasho, arag lacagta ka hor intaadan bixin, oo si toos ah ula soco darawalkaaga.",
+    "question_en": "What is BajGo?",
+    "answer_en": "BajGo is Garowe's on-demand Bajaaj app for rides and deliveries. Book a Bajaaj or send a parcel in a few taps, see your fare before you go, and track your driver live.",
+    "sort_order": 10,
+    "published": true
+  },
+  {
+    "id": "faq-general-where",
+    "category": "general",
+    "question_so": "Meelahee BajGo ka shaqeeyaa?",
+    "answer_so": "Hadda BajGo wuxuu ka shaqeeyaa Garoowe oo keliya. Aagga adeegga waxaad ka arki kartaa bogga \"Meelaha aan ka shaqeyno\". Wuu ballaaran doonaa marka darawallo badan nagu soo biiraan.",
+    "question_en": "Where does BajGo work?",
+    "answer_en": "BajGo currently works in Garowe only. You can see the service area on the \"Service coverage\" page. It will grow as more drivers join.",
+    "sort_order": 20,
+    "published": true
+  },
+  {
+    "id": "faq-general-languages",
+    "category": "general",
+    "question_so": "App-ku luqadee ayuu ku shaqeeyaa?",
+    "answer_so": "App-ku wuxuu ku shaqeeyaa Soomaali iyo Ingiriisi. Soomaali ayaa ah luqadda ugu horreysa; luqadda waxaad ka beddeli kartaa dejinta.",
+    "question_en": "Which languages does the app support?",
+    "answer_en": "The app works in Somali and English. Somali is the default; you can change the language in settings.",
+    "sort_order": 30,
+    "published": true
+  },
+  {
+    "id": "faq-ride-book",
+    "category": "ride",
+    "question_so": "Sidee Bajaaj u dalbadaa?",
+    "answer_so": "Fur app-ka, dooro meesha lagaa qaadayo iyo meesha aad u socoto, arag qiimaha, kadibna xaqiiji. Darawalka ugu dhow ayaa helaya codsigaaga; magaciisa, koodhka gaariga iyo meesha uu joogo ayaad arki doontaa.",
+    "question_en": "How do I book a Bajaaj?",
+    "answer_en": "Open the app, choose your pickup and destination, see the fare, then confirm. The nearest driver receives your request; you will see their name, fleet code and live location.",
+    "sort_order": 40,
+    "published": true
+  },
+  {
+    "id": "faq-ride-no-address",
+    "category": "ride",
+    "question_so": "Cinwaan sax ah ma hayo. Maxaan sameeyaa?",
+    "answer_so": "Dhib ma leh. Biinka khariidadda ka dhig meesha aad joogto oo qor calaamad caan ah oo u dhow, sida masjid, dukaan ama iskuul. Darawalku wuu arki doonaa.",
+    "question_en": "I don't have an exact address. What do I do?",
+    "answer_en": "No problem. Drop the map pin where you are and add a nearby landmark, such as a mosque, shop or school. The driver will see it.",
+    "sort_order": 50,
+    "published": true
+  },
+  {
+    "id": "faq-ride-cancel",
+    "category": "ride",
+    "question_so": "Safar ma joojin karaa?",
+    "answer_so": "Haa, waxaad joojin kartaa ka hor inta safarku bilaaban. Siyaasadda lacag-celinta iyo joojinta ayaa sharxaysa marka khidmad joojin la adeegsado.",
+    "question_en": "Can I cancel a ride?",
+    "answer_en": "Yes, you can cancel before the trip starts. The refund & cancellation policy explains when a cancellation fee applies.",
+    "sort_order": 60,
+    "published": true
+  },
+  {
+    "id": "faq-delivery-what",
+    "category": "delivery",
+    "question_so": "Maxaan diri karaa?",
+    "answer_so": "Xirmooyin, cunto, dukumeenti, dawo iyo alaabta suuqa ilaa 30 kg. Waxyaabaha mamnuuca ah waxaad ka arki kartaa bogga BajGo Delivery.",
+    "question_en": "What can I send?",
+    "answer_en": "Parcels, food, documents, medicine and shopping up to 30 kg. Prohibited items are listed on the BajGo Delivery page.",
+    "sort_order": 70,
+    "published": true
+  },
+  {
+    "id": "faq-delivery-otp",
+    "category": "delivery",
+    "question_so": "Sidee loo hubiyaa in xirmadu gaartay qofka saxda ah?",
+    "answer_so": "Marka darawalku gaaro, qaatuhu wuxuu helayaa koodh 4-lambar ah oo fariin ah. Darawalku wuxuu geliyaa koodhka ka hor intuusan xirmada dhiibin.",
+    "question_en": "How do you make sure the parcel reaches the right person?",
+    "answer_en": "When the driver arrives, the recipient receives a 4-digit code by SMS. The driver enters the code before handing over the parcel.",
+    "sort_order": 80,
+    "published": true
+  },
+  {
+    "id": "faq-payment-fare",
+    "category": "payment",
+    "question_so": "Sidee qiimaha loo xisaabiyaa?",
+    "answer_so": "Qiimaha wuxuu ku salaysan yahay masaafada waddada. Qiimaha bilowga waa $0.50 kiiloomitirkii, ugu yaraan $1.00. Qiimaha saxda ah waxaad arkaysaa app-ka ka hor intaadan xaqiijin.",
+    "question_en": "How is the fare calculated?",
+    "answer_en": "The fare is based on road distance. Launch pricing is $0.50 per km with a $1.00 minimum. You see the exact fare in the app before you confirm.",
+    "sort_order": 90,
+    "published": true
+  },
+  {
+    "id": "faq-payment-methods",
+    "category": "payment",
+    "question_so": "Sidee lacagta loo bixiyaa?",
+    "answer_so": "Lacag caddaan ah ayaa la bixin karaa. Lacag-bixinta mobaylka waxaa lagu dari doonaa marka ay diyaar noqoto; app-ku wuxuu muujinayaa hababka hadda shaqeynaya.",
+    "question_en": "How do I pay?",
+    "answer_en": "You can pay in cash. Mobile money will be added when it is ready; the app shows the methods currently available.",
+    "sort_order": 100,
+    "published": true
+  },
+  {
+    "id": "faq-safety-driver",
+    "category": "safety",
+    "question_so": "Sidee u ogaadaa darawalka saxda ah?",
+    "answer_so": "Darawal kasta wuxuu leeyahay koodh gaari oo BajGo ah, sida BG-0142, oo ku qoran Bajaajka iyo app-ka. Isku hubi magaca, koodhka iyo taarikada ka hor intaadan fuulin.",
+    "question_en": "How do I know I have the right driver?",
+    "answer_en": "Every driver has a BajGo fleet code, such as BG-0142, shown on the Bajaaj and in the app. Check the name, fleet code and plate before you get in.",
+    "sort_order": 110,
+    "published": true
+  },
+  {
+    "id": "faq-safety-share",
+    "category": "safety",
+    "question_so": "Safarkayga ma la wadaagi karaa qof kale?",
+    "answer_so": "Haa. App-ka dhexdiisa, taabo \"Wadaag safarka\" si aad qof aad ku kalsoon tahay ugu dirto xiriirin uu kula socdo safarkaaga.",
+    "question_en": "Can I share my trip with someone?",
+    "answer_en": "Yes. In the app, tap \"Share trip\" to send someone you trust a link that lets them follow your trip.",
+    "sort_order": 120,
+    "published": true
+  },
+  {
+    "id": "faq-drivers-join",
+    "category": "drivers",
+    "question_so": "Sidee darawal BajGo u noqdaa?",
+    "answer_so": "Buuxi foomka isdiiwaangelinta ee boggan. Kooxdayada ayaa ku soo wici doonta si loo hubiyo aqoonsigaaga, shatigaaga iyo Bajaajkaaga. Marka la oggolaado, waxaad soo dejin app-ka darawalka oo bilaabi kartaa.",
+    "question_en": "How do I become a BajGo driver?",
+    "answer_en": "Fill in the registration form on this website. Our team will call you to check your ID, licence and Bajaaj. Once approved, you download the driver app and start.",
+    "sort_order": 130,
+    "published": true
+  },
+  {
+    "id": "faq-drivers-pay",
+    "category": "drivers",
+    "question_so": "Darawallada sidee loo siiyaa lacagta?",
+    "answer_so": "Lacagta caddaanka ah darawalku wuu qaataa isla markaaba. Qayb ka mid ah qiimaha (komishanka) waxaa loo xisaabiyaa BajGo; app-ka darawalka wuxuu muujinayaa dakhliga iyo komishanka safar kasta.",
+    "question_en": "How are drivers paid?",
+    "answer_en": "Cash fares are kept by the driver straight away. A share of each fare (the commission) goes to BajGo; the driver app shows earnings and commission for every trip.",
+    "sort_order": 140,
+    "published": true
+  },
+  {
+    "id": "faq-account-phone",
+    "category": "account",
+    "question_so": "Akoon ma u baahanahay?",
+    "answer_so": "Waxaad u baahan tahay lambar taleefan oo keliya. Koodh ayaa laguu soo dirayaa fariin ahaan; furaha sirta ah looma baahna.",
+    "question_en": "Do I need an account?",
+    "answer_en": "You only need a phone number. A code is sent to you by SMS; there is no password.",
+    "sort_order": 150,
+    "published": true
+  },
+  {
+    "id": "faq-account-delete",
+    "category": "account",
+    "question_so": "Akoonkayga ma tirtiri karaa?",
+    "answer_so": "Haa. App-ka dhexdiisa waxaad ka codsan kartaa tirtiridda akoonka, ama nagala soo xiriir info@baj-go.com.",
+    "question_en": "Can I delete my account?",
+    "answer_en": "Yes. You can request account deletion inside the app, or contact us at info@baj-go.com.",
+    "sort_order": 160,
+    "published": true
+  }
+]

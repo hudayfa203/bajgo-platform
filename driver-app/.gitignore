@@ -1,0 +1,25 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+lib/l10n/generated/
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+android/app/*.jks
+android/app/*.keystore
+**/gradle-wrapper.jar
+android/gradlew
+android/gradlew.bat
+
+# IDE
+.idea/
+*.iml
+.vscode/

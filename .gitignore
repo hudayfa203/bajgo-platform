@@ -1,0 +1,27 @@
+node_modules/
+.next/
+dist/
+build/
+coverage/
+*.log
+.env
+.env.local
+.env.*.local
+uploads/
+.dart_tool/
+.flutter-plugins*
+.packages
+pubspec.lock
+*.iml
+.idea/
+ios/Pods/
+android/.gradle/
+android/local.properties
+*.keystore
+*.jks
+.DS_Store
+
+# Flutter generated
+**/lib/l10n/generated/
+**/android/app/src/main/res/drawable*/splash*.png
+out/
