@@ -114,9 +114,18 @@ jobs:
           emit analyze "$RUNNER_TEMP/analyze.log" '^[[:space:]]*error[[:space:]]*•' 20
           # Tests: the failing assertion and its location.
           emit tests "$RUNNER_TEMP/test.log" '(\[E\]|Expected:|Actual:|^[[:space:]]*package:bajgo)' 15
-          # Build: compiler errors and the Gradle failure block.
-          emit build "$RUNNER_TEMP/build.log" \
-            '(^lib/.*:[0-9]+:[0-9]+:|Error:|^FAILURE|What went wrong|Execution failed|^e:)' 25
+          # Build: Dart/Kotlin compiler errors plus the Gradle failure blocks
+          # with their following lines, which carry the actual cause.
+          if [ -f "$RUNNER_TEMP/build.log" ]; then
+            grep -aE -A6 '(What went wrong|Execution failed|Caused by)' \
+              "$RUNNER_TEMP/build.log" | head -60 > "$RUNNER_TEMP/why.log" || true
+            grep -aE '(^lib/.*:[0-9]+:[0-9]+:|^Error:|^e: |^ERROR:|^> )' \
+              "$RUNNER_TEMP/build.log" | head -25 >> "$RUNNER_TEMP/why.log" || true
+            sort -u "$RUNNER_TEMP/why.log" | while IFS= read -r line; do
+              clean=$(printf '%s' "$line" | tr -d '\r' | cut -c1-380)
+              [ -n "$clean" ] && echo "::error title=${{ matrix.app }} build::${clean}"
+            done
+          fi
           emit l10n "$RUNNER_TEMP/l10n.log" '(Error|error)' 5
           if [ -f "$RUNNER_TEMP/test.log" ]; then
             grep -aE "tests passed|tests? failed" "$RUNNER_TEMP/test.log" | tail -2 |

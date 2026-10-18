@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:latlong2/latlong.dart';
 
 void main() {
-  group('Fare engine — BajGo default pricing ($1 per 2 km)', () {
+  group(r'Fare engine — BajGo default pricing ($1 per 2 km)', () {
     // The table published in the brief and on the pricing page.
     const expected = <int, int>{
       1000: 100, // 1 km  → $1.00 (minimum applies)
@@ -21,7 +21,7 @@ void main() {
       });
     });
 
-    test('never falls below the $1.00 minimum', () {
+    test(r'never falls below the $1.00 minimum', () {
       for (final m in [0, 50, 100, 400, 900, 1999]) {
         expect(DemoPricing.fareCents(m), greaterThanOrEqualTo(100));
       }
