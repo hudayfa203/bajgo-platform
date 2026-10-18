@@ -11,6 +11,12 @@ String formatKm(int metres) => (metres / 1000).toStringAsFixed(1);
 
 int minutesFromSeconds(int seconds) => (seconds / 60).ceil().clamp(1, 999);
 
+/// First letter of a name, safe for empty strings and multi-byte input.
+String initialOf(String? name) {
+  final n = (name ?? '').trim();
+  return n.isEmpty ? 'B' : n.substring(0, 1).toUpperCase();
+}
+
 enum ServiceType { ride, delivery }
 
 ServiceType serviceFromString(String s) =>
