@@ -3,6 +3,9 @@ name: Android APKs
 # Builds the two installable demo APKs and uploads them as downloadable artifacts.
 # Run it from the Actions tab (Run workflow) or let it run on every push to main.
 
+env:
+  FLUTTER_VERSION: '3.47.7'
+
 on:
   push:
     branches: [main]
@@ -40,10 +43,12 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      # Current stable: the plugin versions resolved by pub expect a recent
-      # Flutter and a recent Android Gradle Plugin.
+      # Pinned to the version both APKs are known to build with (run
+      # 39153840454). Raising it means re-checking the Android toolchain
+      # versions in android/settings.gradle and android/app/build.gradle.
       - uses: subosito/flutter-action@v2
         with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: stable
           cache: true
 

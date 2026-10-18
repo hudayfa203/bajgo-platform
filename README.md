@@ -47,9 +47,17 @@ Start with [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), then
 
 The two demo APKs are built by GitHub Actions, not committed to the repo.
 
-1. Open the **Actions** tab → **Android APKs** → **Run workflow** (branch `main`).
-2. When it finishes, download the artifacts **BajGo-Customer-Demo** and **BajGo-Driver-Demo**.
+1. Open the **Actions** tab → **Android APKs** → pick the latest green run (or
+   **Run workflow** on branch `main` to build fresh).
+2. Download the artifacts **BajGo-Customer-Demo** and **BajGo-Driver-Demo**.
 3. Each artifact is a `.zip` containing the `.apk` plus `SHA256SUMS.txt`.
+
+Both APKs are verified to build on Flutter 3.47.7 with AGP 8.11.1, Kotlin 2.2.20,
+Gradle 8.14.3 and compileSdk 36 — first green run
+[39153840454](https://github.com/hudayfa203/bajgo-platform/actions/runs/39153840454),
+~61 MB each, unit tests passing (21 customer, 23 driver). Each run prints every
+APK's size and SHA-256 in its annotations. The APKs are **debug-signed**: good
+for testing, not for the Play Store.
 
 Demo APKs are built with `--dart-define=DEMO=true`: the app runs against a **simulated backend
 inside the app itself**. No server is needed, no booking is real, no money moves. The demo
