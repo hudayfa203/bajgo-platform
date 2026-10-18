@@ -42,7 +42,11 @@ class Env {
     defaultValue: appEnv == 'dev',
   );
 
-  static const bool useMock = _useMockFlag && !isProduction;
+  /// Set by the demo APK build (`--dart-define=DEMO=true`). Forces the whole
+  /// app onto the on-device simulated backend: no server, nothing real.
+  static const bool demo = bool.fromEnvironment('DEMO', defaultValue: true);
+
+  static const bool useMock = (demo || _useMockFlag) && !isProduction;
 
   /// Shown on the account screen; bumped by the release process.
   static const String appVersion = String.fromEnvironment(
