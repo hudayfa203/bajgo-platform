@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -11,6 +10,7 @@ import 'data/api.dart';
 import 'data/demo_api.dart';
 import 'data/providers.dart';
 import 'l10n/generated/app_localizations.dart';
+import 'l10n/material_so.dart';
 
 const bool _demoDiagnostics = Env.demo;
 
@@ -94,11 +94,11 @@ class BajGoApp extends ConsumerWidget {
       themeMode: prefs.themeMode,
       locale: Locale(prefs.locale),
       supportedLocales: AppLocalizations.supportedLocales,
+      // Somali must come with Material/Cupertino/Widgets fallbacks, or no
+      // MaterialLocalizations resolves and every TextField throws.
       localizationsDelegates: const [
         AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
+        ...bajgoLocalizationsDelegates,
       ],
     );
   }

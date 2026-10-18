@@ -64,13 +64,16 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
           children: [
             BgDemoBanner(label: l.mockBanner),
             Expanded(
-              child: SingleChildScrollView(
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 480),
+                  child: SingleChildScrollView(
                 padding: const EdgeInsets.all(24),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: 24),
-                    const BgLogo(height: 40),
+                    const Align(alignment: Alignment.centerLeft, child: BgLogo(height: 40)),
                     const SizedBox(height: 40),
                     Text(l.phoneTitle, style: BgType.display),
                     const SizedBox(height: 8),
@@ -100,7 +103,29 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
                       onPressed: _submit,
                       icon: Icons.arrow_forward,
                     ),
+                    if (Env.useMock) ...[
+                      const SizedBox(height: 24),
+                      BgCard(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Icon(Icons.science_outlined,
+                                size: 18, color: BgColors.dText2),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                '90 000 0103\n${l.devCodeHint(Env.demoOtp)}',
+                                style: BgType.caption,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                    const SizedBox(height: 24),
                   ],
+                ),
+              ),
                 ),
               ),
             ),

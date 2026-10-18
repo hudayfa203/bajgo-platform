@@ -164,8 +164,42 @@ class MockDriverApi implements DriverApi {
     if (code != '123456') throw ApiException('INVALID_OTP', 'Incorrect code');
     if (_profile != null && _profile!.phone == phone) return _profile;
     _pendingPhone = phone;
-    return null; // not registered yet → the app shows the registration wizard
+    // Demo mode signs in to a ready, already-approved driver so the dashboard
+    // and the trip workflow can be tested immediately. On the real backend
+    // verifyOtp returns null for an unknown phone and the app then runs the
+    // five-step registration, which an administrator must approve.
+    _profile = demoDriver(phone);
+    _notify('Welcome to BajGo', 'Demo driver account ready — you can go online.');
+    await _persist();
+    return _profile;
   }
+
+  /// The pre-approved account a demo build signs in to.
+  static DriverProfile demoDriver(String phone) => DriverProfile(
+        id: 'drv-demo',
+        fullName: 'Darawal Tijaabo',
+        phone: phone,
+        verification: VerificationStatus.approved,
+        vehicle: const Vehicle(
+          fleetCode: 'BG-1042',
+          plateNumber: 'PL 4210',
+          makeModel: 'Bajaj RE',
+          colour: 'Blue',
+          year: 2023,
+        ),
+        documents: const [
+          DriverDocument(type: 'national_id', status: DocStatus.approved),
+          DriverDocument(type: 'driving_licence', status: DocStatus.approved),
+          DriverDocument(type: 'vehicle_registration', status: DocStatus.approved),
+          DriverDocument(type: 'insurance', status: DocStatus.approved),
+        ],
+        rating: 4.9,
+        ratingCount: 128,
+        acceptanceRate: 96,
+        memberSince: null,
+        payoutMethod: 'evc_plus',
+        payoutAccount: '90 000 0103',
+      );
 
   @override
   Future<DriverProfile> register({

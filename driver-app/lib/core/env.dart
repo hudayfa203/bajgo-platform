@@ -65,5 +65,8 @@ class Env {
     defaultValue: 'https://baj-go.com/drivers',
   );
 
+  /// The code a demo build accepts; there is no SMS in demo mode.
+  static const String demoOtp = '123456';
+
   static const String userAgentPackage = 'com.bajgo.driver';
 }

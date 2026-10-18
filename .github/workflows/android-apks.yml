@@ -34,13 +34,35 @@ jobs:
         include:
           - app: customer
             dir: customer-app
-            artifact: BajGo-Customer-Demo
+            artifact: BajGo-Customer-Demo-v2
           - app: driver
             dir: driver-app
-            artifact: BajGo-Driver-Demo
+            artifact: BajGo-Driver-Demo-v2
 
     steps:
       - uses: actions/checkout@v4
+
+      # Each runner would otherwise generate its own debug keystore, so every
+      # build would be signed with a different key and Android would refuse to
+      # install it over the previous one.
+      - name: Restore debug keystore
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: bajgo-android-debug-keystore-v1
+
+      - name: Create debug keystore if absent
+        run: |
+          if [ ! -f ~/.android/debug.keystore ]; then
+            mkdir -p ~/.android
+            keytool -genkeypair -v -keystore ~/.android/debug.keystore \
+              -storepass android -keypass android -alias androiddebugkey \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -dname "CN=BajGo Demo, OU=BajGo, O=BajGo, L=Garowe, S=Nugaal, C=SO"
+            echo "::notice title=keystore::created a new debug keystore"
+          else
+            echo "::notice title=keystore::reusing the cached debug keystore"
+          fi
 
       - uses: actions/setup-java@v4
         with:
@@ -87,12 +109,15 @@ jobs:
         working-directory: ${{ matrix.dir }}
         # Informational: style lints must not block a demo build.
         run: |
+          set -o pipefail
           flutter analyze --no-fatal-infos --no-fatal-warnings \
-            2>&1 | tee "$RUNNER_TEMP/analyze.log" || true
+            2>&1 | tee "$RUNNER_TEMP/analyze.log"
 
       - name: Unit tests
         working-directory: ${{ matrix.dir }}
-        run: flutter test 2>&1 | tee "$RUNNER_TEMP/test.log" || true
+        run: |
+          set -o pipefail
+          flutter test 2>&1 | tee "$RUNNER_TEMP/test.log"
 
       # ---------------------------------------------------------------- demo APK
       # DEMO=true makes the app run against its on-device simulated backend:
