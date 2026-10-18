@@ -439,7 +439,12 @@ class BgEmptyState extends StatelessWidget {
           children: [
             Opacity(
               opacity: 0.25,
-              child: SvgPicture.asset('assets/brand/BajGo_Symbol_FullColour.svg', height: 72),
+              child: SvgPicture.asset(
+                t.brightness == Brightness.dark
+                    ? 'assets/brand/BajGo_Symbol_White.svg'
+                    : 'assets/brand/BajGo_Symbol_FullColour.svg',
+                height: 72,
+              ),
             ),
             const SizedBox(height: BgSpace.lg),
             Text(title, textAlign: TextAlign.center, style: t.textTheme.titleLarge),

@@ -200,7 +200,12 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: BgSpace.lg),
-                    SvgPicture.asset('assets/brand/BajGo_Logo_Horizontal_FullColour.svg', height: 34),
+                    SvgPicture.asset(
+                      t.brightness == Brightness.dark
+                          ? 'assets/brand/BajGo_Logo_Horizontal_White.svg'
+                          : 'assets/brand/BajGo_Logo_Horizontal_FullColour.svg',
+                      height: 34,
+                    ),
                     const SizedBox(height: BgSpace.xl),
                     Text(l.phoneTitle, style: t.textTheme.headlineLarge),
                     const SizedBox(height: BgSpace.sm),
@@ -224,7 +229,6 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
                         Expanded(
                           child: TextField(
                             controller: _controller,
-                            autofocus: true,
                             keyboardType: TextInputType.phone,
                             style: t.textTheme.titleLarge,
                             inputFormatters: [

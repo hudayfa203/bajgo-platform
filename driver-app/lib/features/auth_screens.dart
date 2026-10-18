@@ -79,7 +79,6 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
                     TextField(
                       controller: _ctrl,
                       keyboardType: TextInputType.phone,
-                      autofocus: true,
                       style: BgType.bodyStrong,
                       inputFormatters: [
                         FilteringTextInputFormatter.allow(RegExp(r'[0-9+ ]')),
