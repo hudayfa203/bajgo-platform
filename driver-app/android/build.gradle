@@ -19,7 +19,7 @@ subprojects {
 subprojects {
     plugins.withId("com.android.library") {
         project.extensions.configure("android") { ext ->
-            ext.compileSdk = 35
+            ext.compileSdk = 36
             if (ext.namespace == null) {
                 ext.namespace = project.group.toString()
             }
